@@ -14,15 +14,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile LaTeX to PDF
-        id: compile
-        uses: thomas-chauvet/latex2pdf-action@v2
+        uses: xu-cheng/latex-action@v3
         with:
-          output_dir: output
-          main_latex_file: main.tex
-          ctan_packages: "latexsym preprint titlesec marvosym enumitem fancyhdr hyperref etoolbox tools babel-english"
+          root_file: main.tex
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: output/main.pdf
+          name: resumeAhmadUsama-pdf
+          path: main.pdf
