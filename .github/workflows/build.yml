@@ -27,16 +27,21 @@ jobs:
           name: resumeAhmadUsama-pdf
           path: main.pdf
 
-      - name: Get current date
+      - name: Get current date and rename PDF
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         id: date
-        run: echo "date=$(date +'%Y-%m-%d_%H%M')" >> $GITHUB_OUTPUT
+        run: |
+          DATE_TAG=$(date +'%Y-%m-%d_%H%M')
+          DATE_FILE=$(date +'%d%m%Y')
+          echo "tag=$DATE_TAG" >> $GITHUB_OUTPUT
+          echo "filename=resume_ahmadUsama($DATE_FILE).pdf" >> $GITHUB_OUTPUT
+          mv main.pdf "resume_ahmadUsama($DATE_FILE).pdf"
 
       - name: Create Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: build-${{ steps.date.outputs.date }}
-          name: Resume Build ${{ steps.date.outputs.date }}
+          tag_name: build-${{ steps.date.outputs.tag }}
+          name: Resume Build ${{ steps.date.outputs.tag }}
           body: Automated resume PDF build from commit ${{ github.sha }}
-          files: main.pdf
+          files: ${{ steps.date.outputs.filename }}
