@@ -1,0 +1,241 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifdefined\pdfgentounicode
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Muhammad Ahmad Usama} \\ \vspace{1pt}
+    \small +923028565399 $|$ \href{mailto:ahmedusama723@gmail.com}{\underline{ahmedusama723@gmail.com}} $|$
+    \href{https://linkedin.com/in/mrahmadusama}{\underline{linkedin.com/in/mrahmadusama}} $|$
+    \href{https://mrahmadusama.com/}{\underline{mrahmadusama.com}} $|$
+    \href{https://behance.net/mrahmadusama}{\underline{behance.net/mrahmadusama}}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Professional Summary}
+  \small{Strategic UX \& CX Designer with 4+ years of experience transforming complex systems into human-centered, scalable experiences. Skilled in bridging design, business, and technology through Design Thinking, CX Strategy, and Service Design. Experienced in collaborating with senior stakeholders to align user needs with organizational goals, streamline processes, and drive digital transformation across fintech and government projects.}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Senior UX Designer}{Jan 2025 -- Present}
+      {Adalfi -- a Techlogix company}{Lahore, PK}
+      \resumeItemListStart
+        \resumeItem{Collaborate with cross-functional teams to design user-centric experiences for mobile banking apps and digital portals, focusing on usability, accessibility, and business goals.}
+        \resumeItem{Designing user experiences for end-to-end digital payments and smart lending banking apps, incorporating micro-interactions to improve engagement.}
+        \resumeItem{Configured and maintained Figma libraries to streamline design system and collaboration across teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {UX Designer}{Aug 2022 -- Dec 2024}
+      {Techlogix}{Lahore, PK}
+      \resumeItemListStart
+        \resumeItem{Led process re-engineering project for SECP that improved service efficiency by 25\% for 1000s monthly applicants.}
+        \resumeItem{Redesigned internal approval flow across 10 departments of SECP, reducing processing time by 40\% utilizing data visualization to display application status metrics.}
+        \resumeItem{Facilitated design thinking and ideation workshops with cross-functional teams to co-create solutions and validate concepts.}
+        \resumeItem{Mapped service blueprints and optimized digital journeys to improve operational efficiency and customer satisfaction.}
+        \resumeItem{Partnered with business leads to align UX strategy with organizational goals and performance metrics.}
+        \resumeItem{Collaborated with regulatory and technical teams to translate complex workflows into simplified, user-centric digital experiences.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Engineering and Technology}{Lahore, PK}
+      {Master of Science in Computer Science, Major in Information Systems}{2024}
+    \resumeSubheading
+      {University of Engineering and Technology}{Lahore, PK}
+      {Bachelor of Science in Computer Science, Major in Human Computer Interaction}{2022}
+    \resumeSubheading
+      {Punjab College of Science}{Faisalabad, PK}
+      {FSC Pre-Engineering}{2018}
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{SECP -- eZfile} $|$ \emph{UX Research, Service Design, Design Thinking, Figma}}{2023 -- 2025}
+          \resumeItemListStart
+            \resumeItem{Comprehensive digital solution for the Securities and Exchange Commission of Pakistan to streamline and digitize the regulatory filing process.}
+            \resumeItem{Designed an intuitive, user-friendly interface simplifying submission of legal and financial documents, enhancing efficiency and accuracy of filings for businesses across Pakistan.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Agri Business Mobile Application} $|$ \emph{UX Case Study, Mobile Design}}{2022}
+          \resumeItemListStart
+            \resumeItem{Designed a case study mobile application for different categories of agribusiness.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{A1A Carwash App Design} $|$ \emph{UI/UX Case Study, Sitemaps, Wireframing}}{2021}
+          \resumeItemListStart
+            \resumeItem{Created mobile application design including UI/UX case study, sitemaps, and wireframing.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{UX Skills}{: UX Research, UI Prototyping, Wireframing, Interaction Design, Design Systems} \\
+     \textbf{Design Tools}{: Figma Design, Figma Make, Adobe Creative Suite, JustInMind, Canva, HTML/CSS} \\
+     \textbf{Methodologies}{: Design Thinking, User-Centered Design, Agile UX, Accessibility Standards, UX Strategy \& Consulting} \\
+     \textbf{AI \& Development}{: Claude AI to Figma, Cursor Code, AI Research, Process Improvement}
+    }}
+ \end{itemize}
+
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{User Experience (UX): The Ultimate Guide to Usability and UX} $|$ \emph{Udemy}}{Nov 2023}
+      \resumeProjectHeading
+          {\textbf{Start the UX Design Process: Empathize, Define, and Ideate} $|$ \emph{Google Career Certificates}}{May 2023}
+      \resumeProjectHeading
+          {\textbf{Foundations of User Experience (UX) Design} $|$ \emph{Google Career Certificates}}{Jan 2023}
+    \resumeSubHeadingListEnd
+
+
+%-----------WORKSHOPS-----------
+\section{Workshops}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Design Thinking Workshop Phase 1B} -- SECP 'Ezfile' Digital Transformation}{Feb 2023}
+          \resumeItemListStart
+            \resumeItem{Conducted in collaboration with SECP, Ernst \& Young (EY) and Techlogix.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Design Thinking Workshop Phase 2A} -- SECP 'Ezfile' Digital Transformation}{May 2024}
+          \resumeItemListStart
+            \resumeItem{Conducted in collaboration with SECP, Ernst \& Young (EY) and Techlogix.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{English}{: Advanced (C1)} \quad
+     \textbf{Urdu}{: Native}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
