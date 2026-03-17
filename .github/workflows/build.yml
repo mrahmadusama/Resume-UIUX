@@ -23,3 +23,17 @@ jobs:
         with:
           name: resumeAhmadUsama-pdf
           path: main.pdf
+
+      - name: Get current date
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d_%H%M')" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ steps.date.outputs.date }}
+          name: Resume Build ${{ steps.date.outputs.date }}
+          body: Automated resume PDF build from commit ${{ github.sha }}
+          files: main.pdf
