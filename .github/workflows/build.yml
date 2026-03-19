@@ -27,15 +27,14 @@ jobs:
           name: resumeAhmadUsama-pdf
           path: main.pdf
 
-      - name: Get current date and rename PDF
+      - name: Rename PDF
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: mv main.pdf resume_ahmadUsama.pdf
+
+      - name: Get current date
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         id: date
-        run: |
-          DATE_TAG=$(date +'%Y-%m-%d_%H%M')
-          DATE_FILE=$(date +'%d%m%Y')
-          echo "tag=$DATE_TAG" >> $GITHUB_OUTPUT
-          echo "filename=resume_ahmadUsama($DATE_FILE).pdf" >> $GITHUB_OUTPUT
-          mv main.pdf "resume_ahmadUsama($DATE_FILE).pdf"
+        run: echo "tag=$(date +'%Y-%m-%d_%H%M')" >> $GITHUB_OUTPUT
 
       - name: Create Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -44,4 +43,4 @@ jobs:
           tag_name: build-${{ steps.date.outputs.tag }}
           name: Resume Build ${{ steps.date.outputs.tag }}
           body: Automated resume PDF build from commit ${{ github.sha }}
-          files: ${{ steps.date.outputs.filename }}
+          files: resume_ahmadUsama.pdf
